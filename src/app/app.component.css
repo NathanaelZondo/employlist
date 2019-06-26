@@ -1,0 +1,24 @@
+#cform {
+}
+#bg {
+	background-color: #FC9;
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 200px;
+    background-image: url("../assets/dez.jfif");
+    height: 100vh;
+}
+#b1 {
+	font-size: 18px;
+	color: #FFF;
+	font-weight: normal;
+	background-color: #F60;
+	float: none;
+	width: 100px;
+	height: 30px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	clip: rect(auto,auto,auto,auto);
+}

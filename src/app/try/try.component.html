@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+#np {
+	background-image: url("../assets/zee.jpg");
+	background-position: center center;
+	vertical-align: middle;
+	text-align: center;
+}
+</style>
+</head>
+
+<body id = "np">
+
+
+
+<label>Name</label>
+<br>
+<input for ="Name" id = "name" type="text" [(ngModel)] = "sho.name" name = "name">
+<br>
+<label>Surname</label>
+<br>
+<input for ="Surame" id = "surname" type="text" [(ngModel)] = "sho.surname" name = "surname" >
+<br>
+<label>Position</label>
+<br>
+<input for ="Position" id = "position" type="text" [(ngModel)] = "sho.position" name = "position" >
+<br>
+<label>Organization</label>
+<br>
+<input for ="Organization" id = "Organization" type="text" [(ngModel)] = "sho.Organization" name = "Organization" >
+<br>
+<label>Image</label>
+<br>
+<input for ="Image" id = "image" type="txt" [(ngModel)] = "sho.image" name = "image" >
+<br>
+<button type = "submit" (click) = "addemp()">SAVE</button>
+
+
+
+        <table id = "stytab" >
+            <tbody>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Position</th>
+        <th>Organization</th>
+        <th width = "110" height = "110">Image</th>
+        <tr *ngFor = "let ward of employees; let x = index" >
+            
+        <td>{{ward.name}} </td> 
+         <td>{{ward.surname}} </td>
+         <td>{{ward.position}}</td>
+         <td>{{ward.Organization}} </td>
+         <td><img src= '{{ward.image}}'   width = "100" height = "100"/></td>
+         <button (click) = editemployee(x)>update</button>
+         <button (click) = delete()>delete</button>
+        </tr>
+        
+        </tbody>
+        
+        </table>
+        
+     
+
+
+
+<p>Name</p>
+<input for ="Name" id = "name" type="text" [(ngModel)] = "sho2.name" name = "name">
+<p>Surname</p>
+<input for ="Surame" id = "surname" type="text" [(ngModel)] = "sho2.surname" name = "surname" >
+<p>Position</p>
+<input for ="Position" id = "position" type="text" [(ngModel)] = "sho2.position" name = "position" >
+<p>Organization</p>
+<input for ="Organization" id = "Organization" type="text" [(ngModel)] = "sho2.Organization" name = "Organization" >
+<p>Image</p>
+<input for ="Image" id = "image" type="url" [(ngModel)] = "sho2.image" name = "image" >
+<br>
+<button type = "submit" (click) = "updateEmployee()">update</button>
+</body>
